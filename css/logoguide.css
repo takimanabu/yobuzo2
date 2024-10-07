@@ -1,0 +1,390 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+#maincontainer .submain_visual .tlcont .tl {
+  color: #157758;
+}
+@media screen and (min-width: 769px) {
+  #maincontainer .submain_visual.logoguide {
+    height: 147px;
+  }
+  /* 共通 */
+  #logo .link:hover {
+    opacity: 0.7;
+  }
+  #logo .logo-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  #logo .logo-subtitle {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  /* 目的 */
+  #logo .textcont {
+    padding: 30px 30px;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    counter-reset: number 0;
+  }
+  #logo .textcont .toptx {
+    margin: 0 0 50px 0;
+  }
+  #logo .textcont .contbox {
+    margin: 0 0 50px 0;
+    padding: 0 0 50px 0;
+    border-bottom: 1px dotted #000;
+    counter-reset: number2 0 number3 0 number4 0;
+  }
+  #logo .textcont .contbox .mtl {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 0 0 20px 0;
+  }
+  #logo .textcont .contbox p {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+  }
+  #logo .textcont .contbox p:last-child {
+    margin: 0;
+  }
+  #logo .textcont .contbox p a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+  #logo .textcont .contbox ol.numbox,
+  #logo .textcont .contbox ol.numbox2,
+  #logo .textcont .contbox ol.numbox3,
+  #logo .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+  }
+  #logo .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+    counter-reset: number2;
+  }
+  ol.numbox li,
+  ol.numbox4 li {
+    list-style-type: none;
+    counter-increment: number2;
+    margin-left: -0.5em;
+  }
+  ol.numbox li::before,
+  ol.numbox4 li::before {
+    content: '(' counter(number2) ')';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  ol.numbox2 li {
+    list-style-type: none;
+    counter-increment: number3;
+    margin-left: -0.5em;
+  }
+  ol.numbox2 li::before {
+    content: counter(number3) '. ';
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+  }
+  ol.numbox3 li {
+    list-style-type: none;
+    counter-increment: number4;
+    margin-left: -0.5em;
+  }
+  ol.numbox3 li::before {
+    content: counters(number, '') '-' counter(number4) '';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+  }
+  table tr td {
+    border: 1px solid #999;
+    padding: 15px;
+    vertical-align: top;
+  }
+  table tr td:first-child {
+    background: #eeeeee;
+    width: 235px;
+  }
+
+  /* ガイドライン */
+  .logo-download,
+  .logo-guideline {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  #logo-guideline {
+    scroll-margin-top: 120px;
+  }
+  #logo-guideline .guideline {
+    margin: 0 auto!important;
+  }
+  #logo .guideline {
+    background: rgba(221, 234, 231, 0.2);
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto 80px;
+    padding: 60px;
+  }
+  #logo .guideline-inner {
+    background: #fff;
+    border-radius: 20px;
+    padding: 60px;
+    margin-bottom: 45px;
+  }
+  #logo .guideline-inner:last-child {
+    margin-bottom: 0;
+  }
+  #logo .link {
+    color: #138052;
+    text-decoration: underline;
+    transition: .5s;
+  }
+  #logo .logo-text {
+    padding: 0 0 20px;
+  }
+  #logo .color-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  #logo .color-inner:last-child {
+    margin-bottom: 0;
+  }
+  #logo .color .img-area {
+    width: 30%;
+    max-width: 150px;
+  }
+  #logo .color .text-area {
+    width: 65%;
+    margin: 0 0 0 5%;
+  }
+  #logo .isolation .img-area {
+    border: solid 1px #ddd;
+  }
+  #logo .size .img-area {
+    border: solid 1px #ddd;
+  }
+  #logo .download-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  #logo .download-inner li {
+    list-style: none;
+    border: solid 1px #ddd;
+    padding: 30px;
+  }
+  #logo .download-inner li a {
+    text-decoration: underline;
+    transition: .5s;
+  }
+  #logo .download-inner li a:hover {
+    opacity: 0.6;
+  }
+  #logo .download-inner .img-area {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #maincontainer .submain_visual.logoguide {
+    height: 90px;
+  }
+  /* 共通 */
+  #logo .logo-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  #logo .logo-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  /* 目的 */
+  #logo .textcont {
+    padding: 40px 5%;
+    counter-reset: number 0;
+  }
+  #logo .textcont .toptx {
+    margin: 0 0 50px 0;
+  }
+  #logo .textcont .contbox {
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    border-bottom: 1px dotted #000;
+    counter-reset: number2 0 number3 0 number4 0;
+  }
+  #logo .textcont .contbox:last-child {
+    margin: 0;
+  }
+  #logo .textcont .contbox .mtl {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+  #logo .textcont .contbox .mtl:before {
+    font-weight: bold;
+    font-size: 1.5rem;
+    counter-increment: number 1; /* number カウンタの増加数をセット */
+    content: counter(number) '. ';
+  }
+  #logo .textcont .contbox p {
+    margin: 0 0 1.5em 0;
+    font-size: 1.3rem;
+  }
+  #logo .textcont .contbox p:last-child {
+    margin: 0;
+  }
+  #logo .textcont .contbox p a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+  #logo .textcont .contbox ol.numbox,
+  #logo .textcont .contbox ol.numbox2,
+  #logo .textcont .contbox ol.numbox3,
+  #logo .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.3rem;
+  }
+  #logo .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.3rem;
+    counter-reset: number2;
+  }
+  ol.numbox li,
+  ol.numbox4 li {
+    list-style-type: none;
+    counter-increment: number2;
+    margin-left: -0.5em;
+  }
+  ol.numbox li::before,
+  ol.numbox4 li::before {
+    content: '(' counter(number2) ')';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  ol.numbox2 li {
+    list-style-type: none;
+    counter-increment: number3;
+    margin-left: -0.5em;
+  }
+  ol.numbox2 li::before {
+    content: counter(number3) '. ';
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+  }
+  ol.numbox3 li {
+    list-style-type: none;
+    counter-increment: number4;
+    margin-left: -0.5em;
+  }
+  ol.numbox3 li::before {
+    content: counters(number, '') '-' counter(number4) '';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+  }
+  table tr td {
+    border: 1px solid #999;
+    padding: 10px;
+    vertical-align: top;
+  }
+  table tr td:first-child {
+    background: #eeeeee;
+    width: 120px;
+  }
+
+  /* ガイドライン */
+  .logo-download,
+  .logo-guideline {
+    padding: 0 5%;
+  }
+  #logo-guideline {
+    scroll-margin-top: 100px;
+  }
+  #logo-guideline .guideline {
+    margin-bottom: 0!important;
+  }
+  #logo .guideline {
+    background: rgba(221, 234, 231, 0.2);
+    margin-bottom: 30px;
+    padding: 30px 5% 30px 5%;
+  }
+  #logo .guideline-inner {
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  #logo .guideline-inner:last-child {
+    margin-bottom: 0;
+  }
+  #logo .link {
+    color: #138052;
+    text-decoration: underline;
+  }
+  #logo .logo-text {
+    padding: 0 0 20px;
+  }
+  #logo .color-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  #logo .color-inner:last-child {
+    margin-bottom: 0;
+  }
+  #logo .color .img-area {
+    width: 30%;
+    max-width: 150px;
+  }
+  #logo .color .text-area {
+    width: 65%;
+    margin: 0 0 0 5%;
+  }
+  #logo .isolation .img-area {
+    border: solid 1px #ddd;
+  }
+  #logo .size .img-area {
+    border: solid 1px #ddd;
+  }
+  #logo .download-inner {
+    padding: 0;
+  }
+  #logo .download-inner li {
+    list-style: none;
+    border: solid 1px #ddd;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  #logo .download-inner li a {
+    text-decoration: underline;
+    transition: .5s;
+  }
+  #logo .download-inner li:last-child {
+    margin-bottom: 0;
+  }
+  #logo .download-inner .img-area {
+    margin-bottom: 20px;
+  }
+}

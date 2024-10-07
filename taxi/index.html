@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="介護タクシーを手軽にネット予約。「よぶぞー」は東京、神奈川(横浜、川崎)、埼玉、千葉等の関東近郊エリアや大阪、兵庫を中心に介護タクシーの予約が出来るアプリです。車椅子等の利用条件や行先指定をアプリで簡単に指定可能です。" />
+    <meta name="keywords" content="介護タクシー,福祉タクシー,ケアタクシー,車椅子,配車,予約,受付,料金,アプリ,よぶぞー" />
+    <title>介護タクシードライバー向け配車受付アプリ「よぶぞーPLUS」</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="190×190" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://yobuzo.jp/taxi/">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--og-->
+    <meta property="og:url" content="https://yobuzo.jp/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="介護タクシー呼ぶなら「よぶぞー」" />
+    <meta property="og:description" content="「よぶぞー」はWebサイトから介護タクシーを配車依頼できるサービスです。" />
+    <meta property="og:site_name" content="よぶぞー" />
+    <meta property="og:image" content="https://yobuzo.jp/images/common/ogp.webp" />
+    <!--//og-->
+    <!--Safari SmartBanner-->
+    <meta name="apple-itunes-app" content="app-id=1576683060">
+    <!--Android SmartBanner-->
+    <meta name="smartbanner:title" content="介護タクシードライバー専用配車受付アプリ「よぶぞーPLUS」">
+    <meta name="smartbanner:author" content="IT FORCE Inc.">
+    <meta name="smartbanner:price" content="無料">
+    <meta name="smartbanner:price-suffix-google" content=" - Google Play"> <!-- Android用suffix -->
+    <meta name="smartbanner:icon-google" content="/app-plus-icon.png">
+    <meta name="smartbanner:button" content="表示"> <!-- ボタンの表示名 -->
+    <meta name="smartbanner:button-url-google" content="https://play.google.com/store/apps/details?id=com.swiftechie.taxi.lite.android">
+    <meta name="smartbanner:enabled-platforms" content="android"> <!-- スマートバナーを利用するOSの指定 -->
+    <meta name="smartbanner:close-label" content="Close">
+    <!--font-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp_s-noto.min.css" media="print" onload="this.media='all'" />
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css?20230308" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" type="text/css" href="/css/smartbanner.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css?20240816" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" type="text/css" href="/css/index.css?20240816" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" type="text/css" href="/css/plus.css?20240816" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" type="text/css" href="/css/lite-yt-embed.css" media="print" onload="this.media='all'" />
+    <style>
+      body {
+        position: relative;
+      }
+      body::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        display: block;
+        z-index: 100;
+        pointer-events: none;
+      }
+      body.active::after {
+        display: none;
+      }
+    </style>
+    <!--js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/easing.js?20230308" defer></script>
+    <script src="/js/smartbanner.min.js" defer></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/common.js?20240815_2" defer></script>
+    <script src="/js/ofi.min.js?20230308" defer></script>
+    <script src="/js/lite-yt-embed.js" defer></script>
+    <script>
+      $(window).on('load', function () {
+        $('body').addClass('active');
+      });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5WXMJ4F');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body id="plus">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WXMJ4F" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section id="maincontainer" class="smartBn">
+      <div class="top-logo"><a href="/"><img src="/images/common/logo.webp?20230308" alt="介護タクシー呼ぶなら「よぶぞー」"/></a></div>
+      <div class="main-visual">
+        <div class="main-logo-title">
+          <div class="main-sub-title">
+            <img class="pc" src="/images/plus/main-sub-title.webp" alt="介護タクシー配車受付アプリ"/>
+            <img class="sp" src="/images/plus/main-sub-title_sp.webp" alt="介護タクシー配車受付アプリ"/>
+          </div>
+          <div class="logo"><img src="/images/plus/logo_plus_color.webp" alt="よぶぞーPLUS"/></div>
+        </div>
+        <div class="visualcont">
+          <div class="main-content-flex">
+            <div class="text-area">
+              <div class="main-text">
+                <img class="pc" src="/images/plus/main-text.webp?20240815" alt="日々の業務で困っている介護タクシードライバーの方に朗報！"/>
+                <img class="sp" src="/images/plus/main-text_sp.webp?20240815" alt="日々の業務で困っている介護タクシードライバーの方に朗報！"/>
+              </div>
+              <div class="main-about-flex">
+                <div class="main-about-item">
+                  <div class="icon-area"><img class="pc" src="/images/plus/main-about-icon01.webp" alt=""/><img class="sp" src="/images/plus/main-about-icon01_sp.webp" alt=""/></div>
+                  <div class="text-area">電話不要<br>アプリで簡単受付</div>
+                </div>
+                <!--//main-about-item-->
+                <div class="main-about-item">
+                  <div class="icon-area"><img class="pc" src="/images/plus/main-about-icon02.webp" alt=""/><img class="sp" src="/images/plus/main-about-icon02_sp.webp" alt=""/></div>
+                  <div class="text-area">スケジュール<br>管理</div>
+                </div>
+                <!--//main-about-item-->
+                <div class="main-about-item">
+                  <div class="icon-area"><img class="pc" src="/images/plus/main-about-icon03.webp" alt=""/><img class="sp" src="/images/plus/main-about-icon03_sp.webp" alt=""/></div>
+                  <div class="text-area">既存顧客からの<br>指名予約</div>
+                </div>
+                <!--//main-about-item-->
+                <div class="main-about-item">
+                  <div class="icon-area"><img class="pc" src="/images/plus/main-about-icon04.webp" alt=""/><img class="sp" src="/images/plus/main-about-icon04_sp.webp" alt=""/></div>
+                  <div class="text-area">乗降場所を間違わない<br>ナビゲーション<br class="pc_max350">機能</div>
+                </div>
+                <!--//main-about-item-->
+              </div>
+              <div class="plan-block pc">
+                <div class="plan-price">
+                  <div class="left-block">
+                    <div class="title">基本料</div>
+                    <div class="price">0<span class="small">円～</span></div>
+                  </div>
+                  <div class="center-block">
+                    <div class="title">配車受付</div>
+                    <div class="price">1<span class="small">回</span><span class="small black">あたり</span>500<span class="small">円</span></div>
+                  </div>
+                </div>
+                <div class="right-block">
+                  <div>選べる</div>
+                  <div class="text1">3<span class="text2">プラン</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="img-area">
+              <div class="img-company100"><img src="/images/index/taxi_company_100.webp?20230929" alt="連携タクシー会社 100社以上"/></div>
+              <div class="img-app"><img src="/images/plus/app-view.webp" alt=""/></div>
+            </div>
+          </div>
+          <div class="plan-block sp">
+            <div class="plan-price">
+              <div class="left-block">
+                <div class="title">基本料</div>
+                <div class="price">0<span class="small">円～</span></div>
+              </div>
+              <div class="center-block">
+                <div class="title">配車受付</div>
+                <div class="price">1<span class="small">回</span><span class="small black">あたり</span>500<span class="small">円</span></div>
+              </div>
+            </div>
+            <div class="right-block">
+              <div>選べる</div>
+              <div class="text1">3<span class="text2">プラン</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--main-visual-->
+      <section class="sectioncont">
+        <div class="areacont">
+          <div class="link-inner">
+            <div class="link-inner-wrap">
+              <ul>
+                <li><a href="/area/#tokyo">東京都</a></li>
+                <li><a href="/area/#kanagawa">神奈川県</a></li>
+                <li><a href="/area/#saitama">埼玉県</a></li>
+                <li><a href="/area/#chiba">千葉県</a></li>
+                <li><a href="/area/#osaka">大阪府</a></li>
+                <li><a href="/area/#hyogo">兵庫県</a></li>
+              </ul>
+            </div>
+          </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="servicecont">
+          <div class="tlcont">
+            <span class="text-logo"><img src="/images/plus/logo_plus.webp" alt="よぶぞーPLUS"/></span>は<br>
+            こんな<span class="focus">介護タクシードライバー</span>に向けた<br>
+            サービスです。
+          </div>
+          <div class="service-block">
+            <div class="service-block-flex">
+              <div class="img-area"><img src="/images/plus/service-img.webp" alt=""/></div>
+              <div class="list-area">
+                <ul>
+                  <li class="service-item">
+                    <div class="check-icon"><img src="/images/plus/service-check.webp" alt=""/></div>
+                    <div class="text">日々の配車依頼電話の調整に<span class="focus">追われている</span></div>
+                  </li>
+                  <li class="service-item">
+                    <div class="check-icon"><img src="/images/plus/service-check.webp" alt=""/></div>
+                    <div class="text"><span class="focus">自分のペース</span>で配車依頼を受け付けたい</div>
+                  </li>
+                  <li class="service-item">
+                    <div class="check-icon"><img src="/images/plus/service-check.webp" alt=""/></div>
+                    <div class="text"><span class="focus">新しい顧客</span>を探している</div>
+                  </li>
+                  <li class="service-item">
+                    <div class="check-icon"><img src="/images/plus/service-check.webp" alt=""/></div>
+                    <div class="text">電話だと待ち合わせ場所や詳細内容に<span class="focus">食い違いが発生</span>して困っている</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-block-link">
+              <div class="title">１つでも当てはまった方は<br class="sp">ご相談ください！</div>
+              <div class="link"><a class="btn-contact" href="regist/">お申し込み・ご相談</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="moviecont">
+          <div class="subtlcont">
+            <div class="title-inner">介護タクシーがよべる予約アプリ</div>
+            <h2>「よぶぞー」のご案内</h2>
+            <span class="font-inter">- Movie -</span>
+          </div>
+          <div class="movie-inner">
+            <div class="movie-block">
+              <lite-youtube videoid="LrODRmFTTQI" playlabel="Play: Keynote (Google I/O '18)" style="width:100%; max-width:100%; background-image: url('/images/index/hqdefault.webp');"></lite-youtube>
+            </div>
+            <div class="for-site-movie"><a href="/">「よぶぞー（予約アプリ）」についてはこちら</a></div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="plancont">
+          <div class="subtlcont">
+            <h2>料金表</h2>
+            <span class="font-inter">- Plan -</span>
+          </div>
+          <div class="plan-inner">
+            <div class="t-plan-block">選べる<span class="large">3</span>プラン</div>
+            <div class="plan-table t-pc">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th class="t-head plan-light">よぶぞーPLUSライト<span class="supp">まずは試してみたい方向け</span></th>
+                    <th class="t-head plan-standard">よぶぞーPLUSスタンダード<span class="supp">しっかりとお得意様を<br>つくっていきたい方向け</span></th>
+                    <th class="t-head plan-deluxe">よぶぞーPLUSデラックス<span class="supp">もっと自社を<br>アピールしたい方向け</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>月額基本料</th>
+                    <td class="td-light">無料</td>
+                    <td class="td-standard">1,100円<span class="tax">（税込）</span></td>
+                    <td class="td-deluxe">2,200円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付料<span class="small">（受付回数あたり）</span></th>
+                    <td class="td-light">550円<span class="tax">（税込）</span></td>
+                    <td class="td-standard">550円<span class="tax">（税込）</span></td>
+                    <td class="td-deluxe">550円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>スケジュール管理</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>Google カレンダー連動</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>QRコード・利用履歴からの<br>指名予約</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>優先配車</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>目安料金設定</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>介護タクシー案内所への<br>指名予約ボタン掲載</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="plan-table t-sp">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="t-head plan-light" colspan="2">よぶぞーPLUSライト<span class="supp">まずは試してみたい方向け</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>月額基本料</th>
+                    <td class="td-light">無料</td>
+                  </tr>
+                  <tr>
+                    <th>配車受付料<br><span class="small">（受付回数あたり）</span></th>
+                    <td class="td-light">550円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>スケジュール管理</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>Googleカレンダー連動</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_light.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>QRコード・利用履歴からの<br class="pc_max350">指名予約</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>優先配車</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>目安料金設定</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>介護タクシー案内所への<br class="pc_max350">指名予約ボタン掲載</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="plan-table t-sp">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="t-head plan-standard" colspan="2">よぶぞーPLUSスタンダード<span class="supp">しっかりとお得意様をつくっていきたい方向け</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>月額基本料</th>
+                    <td class="td-standard">1,100円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付料<br><span class="small">（受付回数あたり）</span></th>
+                    <td class="td-standard">550円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>スケジュール管理</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>Googleカレンダー連動</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>QRコード・利用履歴からの<br class="pc_max350">指名予約</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>優先配車</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>目安料金設定</th>
+                    <td class="td-standard"><span class="check"><img src="/images/plus/plan-check-icon_standard.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>介護タクシー案内所への<br class="pc_max350">指名予約ボタン掲載</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-none-icon.webp" alt=""></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="plan-table t-sp">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="t-head plan-deluxe" colspan="2">よぶぞーPLUSデラックス<span class="supp">もっと自社をアピールしたい方向け</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>月額基本料</th>
+                    <td class="td-deluxe">2,200円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付料<br><span class="small">（受付回数あたり）</span></th>
+                    <td class="td-deluxe">550円<span class="tax">（税込）</span></td>
+                  </tr>
+                  <tr>
+                    <th>配車受付</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>スケジュール管理</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>Googleカレンダー連動</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>QRコード・利用履歴からの<br class="pc_max350">指名予約</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>優先配車</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>目安料金設定</th>
+                    <td class="td-deluxe"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <th>介護タクシー案内所への<br class="pc_max350">指名予約ボタン掲載</th>
+                    <td class="td-light"><span class="check"><img src="/images/plus/plan-check-icon_deluxe.webp" alt=""></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="plan-table-comment">※受付回数は指名予約、キャンセルは除く</div>
+            <div class="taxi-information">
+              <div class="title-area"><img src="/images/plus/information.webp" alt="介護タクシー案内所 みんなのおでかけ応援サイト"></div>
+              <div class="text-area">
+                <div class="top-text">
+                  介護タクシー案内所は、全国の介護タクシー・福祉タクシー・UDタクシーサービスや料金に関する情報を法人・個人を問わず分かりやすく、検索しやすく掲載した<br class="pc">
+                  「みんなのお出かけ応援サイト」です。
+                </div>
+                <div class="for-site"><a href="https://caretaxi-net.com/column/22961/" target="_blank">介護タクシー案内所へ</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="benefitcont">
+          <div class="subtlcont">
+            <h2>よぶぞーPLUSで<br class="sp">できること</h2>
+            <span class="font-inter">- 4 Benefits -</span>
+          </div>
+          <div class="benefit-inner">
+            <div class="benefit-inner-wrap">
+              <div class="benefit-item">
+                <div class="img-area"><img src="/images/plus/benefit-img01.webp" alt=""/></div>
+                <div class="text-area scanimation aniRight">
+                  <div class="number">01<span class="icon"><img src="/images/plus/benefit-icon01.webp" alt=""/></span></div>
+                  <div class="title">アプリでかんたん受付</div>
+                  <div class="text">スマホアプリ「よぶぞーPLUS』をインストールするだけで、<br><a href="/">「よぶぞー（予約アプリ）」</a>からの配車依頼をアプリ操作のみで受けることができます。予約時に乗降場所の指定や、必要な介護サービスが指定されますので、予約内容の食い違いが発生しません。</div>
+                </div>
+              </div>
+              <!--//benefit-item-->
+              <div class="benefit-item">
+                <div class="text-area scanimation aniLeft">
+                  <div class="number">02<span class="icon"><img src="/images/plus/benefit-icon02.webp" alt=""/></span></div>
+                  <div class="title">フレキシブルな仕事管理</div>
+                  <div class="text">スケジュール管理機能により、ご自身の都合の良い依頼のみを受付可能です。</div>
+                </div>
+                <div class="img-area"><img src="/images/plus/benefit-img02.webp" alt=""/></div>
+              </div>
+              <!--//benefit-item-->
+              <div class="benefit-item">
+                <div class="img-area"><img src="/images/plus/benefit-img03.webp" alt=""/></div>
+                <div class="text-area scanimation aniRight">
+                  <div class="number">03<span class="icon"><img src="/images/plus/benefit-icon03.webp" alt=""/></span></div>
+                  <div class="title">リピーターの獲得</div>
+                  <div class="text">指名予約機能により常連のご利用者から指名受付が可能です。<br>ドライバー様のお得意様を創出します。</div>
+                </div>
+              </div>
+              <!--//benefit-item-->
+              <div class="benefit-item">
+                <div class="text-area scanimation aniLeft">
+                  <div class="number">04<span class="icon"><img src="/images/plus/benefit-icon04.webp?20240815" alt=""/></span></div>
+                  <div class="title">目安料金の事前提示</div>
+                  <div class="text">事前に設定した料金表を元に、予約時に想定距離、時間から概算の運賃、料金を自動計算し、利用者に提示した上で依頼を受ける事が可能です。<br>目安料金の設定は「よぶぞーPLUSスタンダード」「よぶぞーPLUSデラックス」プランでご利用いただけます。</div>
+                </div>
+                <div class="img-area"><img src="/images/plus/benefit-img04.webp?20240815" alt=""/></div>
+              </div>
+              <!--//benefit-item-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="howtocont">
+          <div class="subtlcont">
+            <h2>配車受付の流れ</h2>
+            <span class="font-inter">- How to use -</span>
+          </div>
+          <div class="howto-inner swiper">
+            <div class="howto-inner-flex swiper-wrapper">
+              <div class="howto-item swiper-slide">
+                <div class="img-area"><img class="pc" src="/images/plus/howto-img01.webp" alt=""/><img class="sp" src="/images/plus/howto-img01_sp.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">通知</div>
+                  <div class="text">配車依頼が来たらポップアップ通知</div>
+                </div>
+              </div>
+              <div class="howto-item swiper-slide">
+                <div class="img-area"><img class="pc" src="/images/plus/howto-img02.webp" alt=""/><img class="sp" src="/images/plus/howto-img02_sp.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">受付</div>
+                  <div class="text">予約内容を確認して可能であれば受付</div>
+                </div>
+              </div>
+              <div class="howto-item swiper-slide">
+                <div class="img-area"><img class="pc" src="/images/plus/howto-img03.webp" alt=""/><img class="sp" src="/images/plus/howto-img03_sp.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">スケジュール</div>
+                  <div class="text">受付した予約はスケジュール表に反映</div>
+                </div>
+              </div>
+              <div class="howto-item swiper-slide">
+                <div class="img-area"><img class="pc" src="/images/plus/howto-img04.webp" alt=""/><img class="sp" src="/images/plus/howto-img04_sp.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">詳細</div>
+                  <div class="text">利用日が来たらスケジュール表から予約を確認</div>
+                </div>
+              </div>
+              <div class="howto-item swiper-slide">
+                <div class="img-area"><img class="pc" src="/images/plus/howto-img05.webp" alt=""/><img class="sp" src="/images/plus/howto-img05_sp.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">ナビゲーション</div>
+                  <div class="text">ナビゲーション機能で乗車場所まで迎車</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-nav-flex">
+              <div class="swiper-button-prev"></div>
+              <div class="howto-dots swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="sectioncont">
+        <div class="flowcont">
+          <div class="subtlcont">
+            <h2>ご利用までの流れ</h2>
+            <span class="font-inter">- Flow -</span>
+          </div>
+          <div class="flow-inner">
+            <div class="flow-inner-wrap">
+              <div class="flow-table scanimation">
+                <div class="number-area">01</div>
+                <div class="icon-area"><img src="/images/plus/flow-icon01.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">お申し込み</div>
+                  <div class="text">まずはお申し込み・ご相談フォームでご連絡ください。</div>
+                  <div class="link"><a class="btn-contact" href="regist/">お申し込み・ご相談</a></div>
+                </div>
+              </div>
+              <!--//flow-table-->
+              <div class="flow-table scanimation">
+                <div class="number-area">02</div>
+                <div class="icon-area"><img src="/images/plus/flow-icon02.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">サービスのご説明</div>
+                  <div class="text">弊社コンサルタントがご連絡、詳細説明やデモンストレーションさせていただきます。</div>
+                </div>
+              </div>
+              <!--//flow-table-->
+              <div class="flow-table scanimation">
+                <div class="number-area">03</div>
+                <div class="icon-area"><img src="/images/plus/flow-icon03.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">プランのご提案</div>
+                  <div class="text">タクシー会社様、ドライバー様のニーズによってプランのご提案いたします。</div>
+                </div>
+              </div>
+              <!--//flow-table-->
+              <div class="flow-table scanimation">
+                <div class="number-area">04</div>
+                <div class="icon-area"><img src="/images/plus/flow-icon04.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">ご契約</div>
+                  <div class="text">ご契約後、利用プラン内容に応じた対応エリアや対応可能内容を弊社で設定いたします。</div>
+                </div>
+              </div>
+              <!--//flow-table-->
+              <div class="flow-table scanimation">
+                <div class="number-area">05</div>
+                <div class="icon-area"><img src="/images/plus/flow-icon05.webp" alt=""/></div>
+                <div class="text-area">
+                  <div class="title">ご利用開始</div>
+                  <div class="text">ドライバー向けアプリ「よぶぞーPLUS」 をダウンロードして即利用可能です。</div>
+                  <div class="app-links">
+                    <a class="link-apple" href="https://apps.apple.com/jp/app/id1576683060" target="_blank"><img src="/images/howto/store-apple.webp?20230612" alt=""></a>
+                    <a class="link-android" href="https://play.google.com/store/apps/details?id=com.swiftechie.taxi.lite.android" target="_blank"><img src="/images/howto/store-google.webp?20230612" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <!--//flow-table-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectioncont-->
+      <section class="banner-plus">
+        <div class="banner-flex">
+          <div class="left-cont"><img src="/images/plus/app-view-banner.webp" alt=""/></div>
+          <div class="right-cont">
+            <div class="sub-title">介護タクシー配車受付アプリ<span class="block"><img src="/images/plus/sub-title-background.webp?20240326" alt=""></span></div>
+            <div class="logo-banner"><img src="/images/plus/logo_plus.webp" alt="よぶぞーPLUS"/></div>
+            <div class="contact-banner">
+              <div class="title">お気軽にお申し込み・ご相談ください</div>
+              <div class="link"><a class="btn-contact" href="regist/">お申し込み・ご相談</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!--maincontainer-->
+    <a class="fixed-contact pc" href="regist/">
+      <span class="icon"><img src="/images/plus/fixed-contact-icon.webp?20240129" alt=""/></span>
+      <div class="words"><span>お</span><span>申</span><span>し</span><span>込</span><span>み</span><span>・</span><span>ご</span><span>相</span><span>談</span></div>
+    </a>
+    <div class="fixed-contact fadeInContent"><a href="regist/"><img src="/images/plus/fixed-contact-mail.webp?20240129" alt="">お申し込み・ご相談</a></div>
+    <!--footer-->
+    <footer>
+      <div class="copy font-inter">&copy;IT FORCE, Inc. All Rights Reserved.</div>
+      <nav>
+        <div class="box"><a href="/company/">運営会社</a></div>
+        <div class="box"><a href="/privacy/">プライバシーポリシー</a></div>
+        <div class="box"><a href="/terms/">利用規約</a></div>
+        <div class="box"><a href="/support/">お問い合わせ</a></div>
+      </nav>
+    </footer>
+    <!--//footer-->
+    <script>
+      var d = $('.sectioncont').length;
+      $('.sectioncont').each(function (a) {
+        $(this).attr('id', 'content' + (a + 1));
+      });
+      var e = $('.navin .box a');
+      f();
+      function f() {
+        var l = new Array();
+        for (var c = 0; c < e.length; c++) {
+          var k = e.eq(c).attr('href');
+          if (k.charAt(0) == '#') {
+            if ($(k).length) {
+              var i = $(k).offset().top - 1 - $('header').height();
+            }
+            var b = i + $(k).outerHeight(true) - 1;
+            l[c] = [i, b];
+          }
+        }
+        var a = $(window).scrollTop();
+        for (var c = 0; c < l.length; c++) {
+          if (l[c][0] <= a && l[c][1] >= a) {
+            e.removeClass('active');
+            e.eq(c).addClass('active');
+            c == l.length;
+          }
+        }
+      }
+
+      const mySwiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: false,
+        slidesPerView: 'auto',
+        speed: 600,
+ 
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      var windowWidth = $(window).width();
+      var windowSm = 768;
+      var scrollPosition = $(window).scrollTop();
+      if (windowWidth <= windowSm) {
+        //横幅768px以下（スマホ）に適用させるJavaScriptを記述
+        if ($(window).scrollTop() <= 250) {
+        $('.fadeInContent').hide();
+      }
+      $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 250) {
+          $('.fadeInContent').fadeIn();
+        } else {
+          $('.fadeInContent').fadeOut();
+        }
+      });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,316 @@
+@charset "UTF-8";
+@media screen and (min-width: 769px) {
+  #terms .textcont {
+    padding: 130px 30px;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    counter-reset: number 0;
+  }
+  #terms .textcont .contbox {
+    margin: 0 0 100px 0;
+    padding: 0 0 60px 0;
+    border-bottom: 1px dotted #000;
+    counter-reset: number3 0 number4 0;
+  }
+  #terms .textcont .contbox:last-child {
+    margin: 0 0 0 0;
+    border-bottom: none;
+  }
+  #terms .textcont .contbox .mtl {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 40px 0;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+  #terms .textcont .contbox .mtl:before {
+    font-weight: bold;
+    font-size: 2rem;
+    counter-increment: number 1; /* number カウンタの増加数をセット */
+    content: counter(number) '  ';
+  }
+  #terms .textcont .contbox p {
+    margin: 0 0 1.5em 30px;
+    font-size: 1.4rem;
+  }
+  #terms .textcont .contbox li p {
+    margin: 0 0 0 0 !important;
+    font-size: 1.4rem;
+  }
+  #terms .textcont .contbox p:last-child {
+    margin: 0 0 2.5em 30px;
+  }
+  #terms .textcont .contbox p a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+  #terms .textcont .contbox .box {
+    padding: 0 0 20px 0;
+    counter-reset: number2 0;
+  }
+  #terms .textcont .contbox .box2 {
+    padding: 0 0 50px 30px;
+  }
+  #terms .textcont .contbox .box2:last-child {
+    padding: 0 0 0 30px;
+  }
+  #terms .textcont .contbox ol.numbox {
+    margin: 0 0 2.5em 0;
+  }
+  #terms .textcont .contbox ol.numbox2,
+  #terms .textcont .contbox ol.numbox3,
+  #terms .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+  }
+  #terms .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+    counter-reset: number2;
+  }
+  ol.numbox li {
+    list-style-type: none;
+    counter-increment: number2;
+    margin-left: -0.5em;
+    padding: 0 0 0 30px;
+  }
+  ol.numbox li::before {
+    content: '(' counter(number2) ')';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  ol.numbox2 li {
+    list-style-type: none;
+    counter-increment: number3;
+    margin-left: -0.5em;
+  }
+  ol.numbox2 li::before {
+    content: counter(number3) '. ';
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+  }
+  ol.numbox3 li {
+    list-style-type: none;
+    counter-increment: number4;
+    margin-left: -0.5em;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-weight: bold;
+  }
+  ol.numbox3 li::before {
+    content: counters(number, '') '.' counter(number4) '.';
+    display: inline-block;
+    margin-left: -3em;
+    width: 3em;
+  }
+  ol.numbox3 li::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    border-bottom: 1px solid #000;
+    top: 1em;
+    left: -30px;
+    display: block;
+  }
+  ol.numbox4 {
+    margin-bottom: 1.5em;
+  }
+  ol.numbox4 li {
+    list-style-type: none;
+    list-style-position: inside;
+    counter-increment: number5;
+    margin-left: -1em;
+    padding: 0 0 1.5em 0;
+    position: relative;
+    font-weight: bold;
+  }
+  ol.numbox4 li {
+    font-weight: normal;
+  }
+  ol.numbox4 li span {
+    font-weight: bold;
+  }
+  ol.numbox4 li span::before {
+    content: counters(number, '') '.' counter(number4) '.' counter(number5) '.';
+    display: inline-block;
+  }
+  ol.numbox4 li p {
+    padding: 5px 0 0 0;
+  }
+  #terms .box2 strong {
+    font-size: 1.6rem;
+    margin: 0 0 10px 0;
+    display: block;
+  }
+  #terms .box2 p {
+    padding: 20px 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+  }
+  #terms .box2 ul {
+    padding: 0 0 0 1em;
+    margin: 0;
+  }
+  #terms .box2 ul.alpha {
+    list-style-type: lower-alpha;
+    padding: 0 0 0 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #terms .textcont {
+    padding: 75px 5% 40px 5%;
+    counter-reset: number 0;
+  }
+  #terms .textcont .contbox {
+    margin: 0 0 50px 0;
+    padding: 0 0 30px 0;
+    border-bottom: 1px dotted #000;
+    counter-reset: number3 0 number4 0;
+  }
+  #terms .textcont .contbox:last-child {
+    margin: 0 0 0 0;
+    border-bottom: none;
+  }
+  #terms .textcont .contbox .mtl {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 0 0 20px 0;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+  #terms .textcont .contbox .mtl:before {
+    font-weight: bold;
+    font-size: 1.6rem;
+    counter-increment: number 1; /* number カウンタの増加数をセット */
+    content: counter(number) '  ';
+  }
+  #terms .textcont .contbox p {
+    margin: 0 0 1.5em 30px;
+    font-size: 1.3rem;
+  }
+  #terms .textcont .contbox li p {
+    margin: 0 0 0 0 !important;
+    font-size: 1.3rem;
+  }
+  #terms .textcont .contbox p:last-child {
+    margin: 0 0 2.5em 30px;
+  }
+  #terms .textcont .contbox p a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+  #terms .textcont .contbox .box {
+    padding: 0 0 20px 0;
+    counter-reset: number2 0;
+  }
+  #terms .textcont .contbox .box2 {
+    padding: 0 0 50px 30px;
+  }
+  #terms .textcont .contbox .box2:last-child {
+    padding: 0 0 0 30px;
+  }
+  #terms .textcont .contbox ol.numbox {
+    margin: 0 0 2.5em 0;
+  }
+  #terms .textcont .contbox ol.numbox2,
+  #terms .textcont .contbox ol.numbox3,
+  #terms .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+  }
+  #terms .textcont .contbox ol.numbox4 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4rem;
+    counter-reset: number2;
+  }
+  ol.numbox li {
+    list-style-type: none;
+    counter-increment: number2;
+    margin-left: -0.5em;
+    padding: 0 0 0 30px;
+  }
+  ol.numbox li::before {
+    content: '(' counter(number2) ')';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2.5em;
+  }
+  ol.numbox2 li {
+    list-style-type: none;
+    counter-increment: number3;
+    margin-left: -0.5em;
+  }
+  ol.numbox2 li::before {
+    content: counter(number3) '. ';
+    display: inline-block;
+    margin-left: -2em;
+    width: 2em;
+  }
+  ol.numbox3 li {
+    list-style-type: none;
+    counter-increment: number4;
+    margin-left: -0.5em;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-weight: bold;
+  }
+  ol.numbox3 li::before {
+    content: counters(number, '') '.' counter(number4) '.';
+    display: inline-block;
+    margin-left: -3em;
+    width: 3em;
+  }
+  ol.numbox3 li::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    border-bottom: 1px solid #000;
+    top: 1em;
+    left: -30px;
+    display: block;
+  }
+  ol.numbox4 {
+    margin-bottom: 1.5em;
+  }
+  ol.numbox4 li {
+    list-style-type: none;
+    list-style-position: inside;
+    counter-increment: number5;
+    margin-left: -1em;
+    padding: 0 0 1.5em 0;
+    position: relative;
+    font-weight: bold;
+  }
+  ol.numbox4 li {
+    font-weight: normal;
+  }
+  ol.numbox4 li span {
+    font-weight: bold;
+  }
+  ol.numbox4 li span::before {
+    content: counters(number, '') '.' counter(number4) '.' counter(number5) '.';
+    display: inline-block;
+  }
+  ol.numbox4 li p {
+    padding: 5px 0 0 0;
+  }
+  #terms .box2 strong {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    display: block;
+  }
+  #terms .box2 p {
+    padding: 20px 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+  }
+  #terms .box2 ul {
+    padding: 0 0 0 1em;
+    margin: 0;
+  }
+  #terms .box2 ul.alpha {
+    list-style-type: lower-alpha;
+    padding: 0 0 0 1.5em;
+  }
+}

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@media screen and (min-width: 769px) {
+  #company .tablecont {
+    padding: 130px 30px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  #company .tablecont table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: bold;
+  }
+  #company .tablecont table td {
+    padding: 45px 30px 45px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    vertical-align: top;
+  }
+  #company .tablecont table td:first-child {
+    width: 180px;
+    padding: 45px 30px;
+  }
+  #company .tablecont table td a[target='_blank'] {
+    text-decoration: underline;
+    transition: all 0.2s;
+  }
+  #company .tablecont table td a[target='_blank']:hover {
+    opacity: 0.7;
+  }
+  #company .tablecont table td a[target='_blank']::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url('/images/common/b_blank.svg') no-repeat;
+    background-size: contain;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    top: -2px;
+    margin: 0 0 0 5px;
+  }
+  #company .tablecont table td .map {
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding-top: 56.25%;
+    position: relative;
+  }
+  #company .tablecont table td .map iframe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 768px) {
+  #company .tablecont {
+    padding: 75px 5% 40px 5%;
+  }
+  #company .tablecont table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: bold;
+    border-top: 1px solid #000;
+  }
+  #company .tablecont table td {
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid #000;
+    vertical-align: top;
+    display: block;
+  }
+  #company .tablecont table td:first-child {
+    padding: 15px 10px 5px 10px;
+    border-bottom: none;
+  }
+  #company .tablecont table td a[target='_blank'] {
+    text-decoration: underline;
+    transition: all 0.2s;
+  }
+  #company .tablecont table td a[target='_blank']:hover {
+    opacity: 0.7;
+  }
+  #company .tablecont table td a[target='_blank']::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url('/images/common/b_blank.svg') no-repeat;
+    background-size: contain;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    top: -2px;
+    margin: 0 0 0 5px;
+  }
+  #company .tablecont table td .map {
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding-top: 56.25%;
+    position: relative;
+  }
+  #company .tablecont table td .map iframe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+}

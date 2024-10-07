@@ -1,0 +1,329 @@
+/*　全体　*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/*　ヘッダー　*/
+.insertion_html {
+  margin: 20px auto 0;
+  padding: 0 20px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 680px) {
+  .insertion_html {
+    display: block;
+  }
+}
+
+/*　必須　*/
+b {
+  background: #d60000;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.wrapper {
+  position: relative;
+  border: none;
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: auto;
+}
+
+/*　背景色　*/
+.wrapper .contents {
+  background: #f9f9f9;
+}
+
+/*　タイトル　*/
+.wrapper .contents h3 {
+  font-size: 36px;
+  color: #1C47A8;
+  border-left: none;
+  padding: 30px 0px;
+  line-height: normal;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*　本文　*/
+.wrapper .contents .main p {
+  margin: 40px 0;
+  font-size: 16px;
+  color: #333333;
+  word-break: break-all;
+}
+
+/*　クエスチョン　*/
+.wrapper .contents .main .question p {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #1C47A8;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .question p {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/*　質問内容　*/
+.wrapper .contents .main .answer h4 {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #1C47A8;
+  word-break: break-all;
+}
+
+/*　チェックボックス　*/
+.wrapper .contents .main input[type="checkbox"] {
+  margin: 0 8px 0 0;
+  border: 1px solid #b9b9b9;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  accent-color: #1c47a8;
+  position: absolute;
+  left: 24px;
+  transform: translateY(6px);
+
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main input[type="checkbox"] {
+    left: 20px;
+  }
+}
+
+/*　選択肢　*/
+.wrapper .contents .main table.input span {
+  line-height: 35px;
+  font-size: 16px;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main table.input span {
+    padding-left: 30px;
+  }
+}
+
+.wrapper .contents .main table.input th {
+  text-align: left;
+  vertical-align: baseline;
+  padding: 8px 20px 8px 0;
+  font-size: 16px;
+  border-bottom: none;
+  width: 150px;
+  line-height: 23px;
+}
+
+.wrapper .contents .main table.input td {
+  vertical-align: baseline;
+  padding: 12px 0;
+  font-size: 14px;
+  line-height: normal;
+  border-bottom: none;
+}
+
+.wrapper .contents .main table.input {
+  margin: 0px;
+  width: 98%;
+}
+
+/*　入力フォーム　*/
+.wrapper .contents .main table.input td {
+  vertical-align: baseline;
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: normal;
+  border-bottom: none;
+}
+
+/*　プレースホルダーの枠　*/
+.wrapper .contents .main input.ipt1 {
+  border-radius: 3px;
+  border: 1px solid #b9b9b9;
+  width: 340px;
+  height: 35px;
+  padding: 0 10px;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main input.ipt1 {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/*　送信ボタン　*/
+.wrapper .contents .main .button1 {
+  text-decoration: none;
+  background-color: #1C47A8;
+  border: solid 2px #1c47A8;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 0;
+  line-height: 19px;
+  text-align: center;
+  text-indent: 0;
+  width: 100%;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .button1 {
+    display: block;
+  }
+}
+
+/*　モーダル　*/
+.wrapper .contents .main .popup {
+  border: 2px solid #1C47A8;
+  border-radius: 10px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -237px;
+  background-color: #f9f9f9;
+  z-index: 1;
+  width: 474px;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .popup {
+    width: 80%;
+    margin-left: -40%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+/*　確認　*/
+.wrapper .contents .main .popup .ttl {
+  padding: 0;
+  line-height: normal;
+  text-indent: -10px;
+  text-align: center;
+  color: #1C47A8;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .popup .ttl {
+    padding: 0;
+  }
+}
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: none;
+}
+
+/*　保存しますよろしいですか　*/
+.wrapper .contents .main p {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333333;
+  word-break: break-all;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main p {
+    margin: 20px;
+  }
+}
+
+.wrapper .contents .main .popup div {
+  padding: 0px 72px 20px 72px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .popup div {
+    padding: 0 0 20px;
+  }
+}
+
+/*ボタンのエリア全体 */
+.wrapper .contents .main .popup div .submitArea {
+  text-align: center;
+}
+
+.wrapper .contents .main .submitArea p {
+  margin: 0 9px;
+  display: inline-block;
+  width: 50%;
+  max-width: 335px;
+
+}
+
+@media (max-width: 680px) {
+  .wrapper .contents .main .submitArea p {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/*ボタンの並び */
+.submitArea {
+  display: flex;
+  flex: auto;
+  margin: 0 auto;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 680px) {
+  .submitArea {
+    display: block;
+  }
+}
+
+/*　キャンセルボタン　*/
+.wrapper .contents .main .button4 {
+  background-color: #fff;
+  text-decoration: none;
+  border: 2px solid #1C47A8;
+  border-radius: 5px;
+  color: #1C47A8;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 0;
+  text-align: center;
+  text-indent: none;
+  font-weight: bold;
+  width: 100%;
+}
+
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: none;
+}
+
+.submitArea {
+  text-align: center;
+}
+
+.wrapper .contents .main .submitArea p.clear .fa {
+  display: none;
+}
+
+h4 {
+  text-align: left;
+}

@@ -1,0 +1,415 @@
+@charset "UTF-8";
+.flow-table .step-text ol li {
+  padding: 0 0 0 0.5em;
+  line-height: 3rem;
+  list-style: conic-gradient;
+}
+.flow-inner .table-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.flow-inner .block-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #47A737;
+}
+.flow-table .step-link.link-banner a {
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0 12px;
+  padding: 0;
+}
+.flow-table .step-link.link-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-table .step-text ol li a {
+  text-decoration: underline;
+  color: #3775b3;
+}
+@media screen and (min-width: 1025px) {
+  .scanimation {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .scanimation.active {
+    opacity: 1;
+  }
+  .flow-table .img-area img {
+    margin-top: -28px;
+    margin-left: -15px;
+    min-width: calc(100% + 40px);
+  }
+  .flow-table .img-area img.phone {
+    width: 270px;
+    min-width: 270px;
+    margin-top: -16px;
+    margin-left: 115px;
+  }
+  .flow-table .text-area {
+    width: 558px;
+    min-width: 558px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .page-btn-area {
+    padding: 67px 50px 70px;
+    background: #EFF3F7;
+  }
+  .page-btns {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: solid 3px #fff;
+    border-radius: 35px;
+    width: fit-content;
+    margin: 0 auto 55px;
+  }
+  .page-btns .link a {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    width: 291px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 30px;
+    color: #F58F18;
+    background: #fff;
+    transition: all 0.2s;
+  }
+  .page-btns .link a:hover {
+    background: #FFF5E9;
+  }
+  .page-btns .link a.active {
+    background: #F58F18;
+    color: #fff;
+    pointer-events: none;
+  }
+  .page-btns .arrow {
+    display: block;
+    width: 13px;
+    height: 22px;
+    position: relative;
+    margin: 0 10px;
+  }
+  .page-btns .arrow::before,
+  .page-btns .arrow::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: #F58F18;
+    position: absolute;
+  }
+  .page-btns .arrow::before {
+    transform: rotate(45deg);
+    top: 6px;
+    right: 0;
+  }
+  .page-btns .arrow::after {
+    transform: rotate(-45deg);
+    top: 15px;
+    right: 0;
+  }
+  .page-btn-text {
+    font-size: 1.8rem;
+    line-height: 4.8rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .flow-inner {
+    padding: 120px 30px 20px;
+    background: rgba(221, 234, 231, 0.2);
+    overflow: hidden;
+  }
+  .flow-inner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .flow-table {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    transition: all 0.5s;
+  }
+  .flow-table .img-area img {
+    transition: all 0.7s;
+    transform: scale(1.07);
+  }
+  .flow-table.active .img-area img {
+    transform: scale(1);
+  }
+  .flow-table .comment {
+    background: #fff;
+    border: solid 1px #46A736;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+  }
+  .flow-table .step-title {
+    display: flex;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-top: 5px;
+    margin-bottom: 27px;
+  }
+  .flow-table .step-title img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+    margin-top: -15px;
+  }
+  .flow-table .step-link a {
+    display: block;
+    width: 344px;
+    background: #138052;
+    border: solid 1px #138052;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 19px 0;
+    border-radius: 35px;
+    transition: all 0.2s;
+    margin: 0 auto;
+  }
+  .flow-table .step-link.link-banner a:nth-child(1) {
+    width: 180px;
+  }
+  .flow-table .step-link.link-banner a:nth-child(2) {
+    width: 224px;
+  }
+  .flow-table .step-link.bg-white a {
+    background: #fff;
+    border: solid 1px #138052;
+    color: #138052;
+  }
+  .flow-table .step-link a:hover {
+    opacity: 0.7;
+  }
+  .flow-table .step-text p {
+    margin-bottom: 1em;
+  }
+  .flow-table .step-text p.bottom {
+    margin-top: 1em;
+  }
+  .flow-table .step-text ol {
+    margin: 0;
+    padding: 0 0 0 2em;
+  }
+  .flow-table .step-text ol li::marker {
+    color: #138052;
+    font-weight: bold;
+  }
+  .flow-table .step-text ol li a {
+    transition: all 0.2s;
+  }
+  .flow-table .step-text ol li a:hover {
+    opacity: 0.7;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .flow-table .img-area img {
+    margin-top: -22px;
+    min-width: calc(100% + 20px);
+  }
+  .flow-table .text-area {
+    width: 490px;
+    min-width: 490px;
+  }
+  .flow-table .img-area {
+    width: 100%;
+  }
+  .flow-table .img-area img.phone {
+    width: 230px;
+    min-width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flow-inner .table-title {
+    font-size: 1.8rem;
+    line-height: 1.7em;
+    margin-bottom: 30px;
+  }
+  .page-btn-area {
+    padding: 60px 5%;
+    background: #EFF3F7;
+  }
+  .page-btns {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: solid 3px #fff;
+    border-radius: 22px;
+    width: fit-content;
+    margin: 0 auto 40px;
+  }
+  .page-btns .link a {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    font-weight: bold;
+    width: 128px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 20px;
+    color: #F58F18;
+    background: #fff;
+  }
+  .page-btns .link a:hover {
+    background: #FFF5E9;
+  }
+  .page-btns .link a.active {
+    background: #F58F18;
+    color: #fff;
+    pointer-events: none;
+  }
+  .page-btns .arrow {
+    display: block;
+    width: 11px;
+    height: 22px;
+    position: relative;
+    margin: 0 6px;
+  }
+  .page-btns .arrow::before,
+  .page-btns .arrow::after {
+    content: '';
+    display: block;
+    width: 11px;
+    height: 2px;
+    background: #F58F18;
+    position: absolute;
+  }
+  .page-btns .arrow::before {
+    transform: rotate(45deg);
+    top: 6px;
+    right: 0;
+  }
+  .page-btns .arrow::after {
+    transform: rotate(-45deg);
+    top: 13px;
+    right: 0;
+  }
+  .page-btn-text {
+    font-size: 1.5rem;
+    line-height: 1.7em;
+    font-weight: bold;
+    text-align: left;
+  }
+  .flow-inner {
+    padding: 60px 5% 0px;
+    background: rgba(221, 234, 231, 0.2);
+    overflow: hidden;
+  }
+  .flow-inner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .flow-table {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    margin-bottom: 60px;
+  }
+  .flow-table .img-area img {
+    min-width: calc(100% + 5.8%);
+    margin-bottom: -5%;
+  }
+  .flow-table .img-area img.phone {
+    width: 55%;
+    min-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -5px;
+  }
+  .flow-table .text-area {
+    width: 100%;
+    min-width: auto;
+  }
+  .flow-table .comment {
+    background: #fff;
+    border: solid 1px #46A736;
+    border-radius: 10px;
+    padding: 23px 20px 30px;
+    margin-bottom: 22px;
+  }
+  .flow-table .step-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .flow-table .step-title img {
+    width: 45px;
+    margin-bottom: 7px;
+  }
+  .flow-table .step-text {
+    font-size: 1.4rem;
+    line-height: 1.7em;
+  }
+  .flow-table .step-link a {
+    display: block;
+    width: 243px;
+    background: #138052;
+    border: solid 1px #138052;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 19px 0;
+    border-radius: 35px;
+    transition: all 0.2s;
+    margin: 0 auto;
+  }
+  .flow-table .step-link.bg-white a {
+    background: #fff;
+    border: solid 1px #138052;
+    color: #138052;
+  }
+  .flow-table .step-link a:hover {
+    opacity: 0.7;
+  }
+  .flow-inner .block-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .flow-table .step-text p {
+    margin: 2em 0 1em;
+  }
+  .flow-table .step-text p.bottom {
+    margin: 1em 0 2em;
+  }
+  .flow-table .step-text ol {
+    margin: 0;
+    padding: 0 0 0 18px;
+  }
+  .flow-table .step-text ol li {
+    padding: 0 0 0 0.5em;
+    line-height: 3rem;
+  }
+  .flow-table .step-text ol li::marker {
+    color: #138052;
+    font-weight: bold;
+  }
+  .flow-table .step-link.link-banner a {
+    margin: 0 10px;
+  }
+  .flow-table .step-link.link-banner a:nth-child(1) {
+    width: 45%;
+    max-width: 190px;
+  }
+  .flow-table .step-link.link-banner a:nth-child(2) {
+    width: 55%;
+    max-width: 236px;
+  }
+}

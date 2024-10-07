@@ -1,0 +1,234 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list {
+}
+/* Icons */
+@font-face {
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  margin: 0 0 0 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: 4;
+  background: none;
+}
+@media screen and (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 0 0;
+    top: 55%;
+  }
+}
+.slick-next:hover,
+.slick-next:focus {
+  opacity: 0.8;
+}
+.slick-prev:hover,
+.slick-prev:focus {
+  opacity: 0.8;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: white;
+}
+.slick-prev {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
+}
+.br .slick-prev {
+  width: 30px;
+  height: 30px;
+  left: -30px;
+}
+@media screen and (max-width: 768px) {
+  .slick-prev {
+    width: 20px;
+    height: 20px;
+    left: 2.5%;
+  }
+  .br .slick-prev {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+  }
+}
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+.slick-prev:before {
+  content: '';
+}
+[dir='rtl'] .slick-prev:before {
+  content: '';
+}
+.slick-next {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: rotate(45deg);
+}
+.br .slick-next {
+  width: 30px;
+  height: 30px;
+  right: -30px;
+}
+@media screen and (max-width: 768px) {
+  .slick-next {
+    width: 20px;
+    height: 20px;
+    right: 2.5%;
+  }
+  .br .slick-next {
+    width: 50px;
+    height: 50px;
+    right: 2.5%;
+  }
+}
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+.slick-next:before {
+  content: '';
+}
+[dir='rtl'] .slick-next:before {
+  content: '';
+}
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  display: block;
+  width: 100%;
+  padding: 0 100px 0 0;
+  list-style: none;
+  text-align: center;
+  z-index: 4;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0px 7px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button {
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #5b7ebf;
+}
+.slick-dots li.slick-active button {
+  background: #5b7ebf;
+}
+@media screen and (max-width: 768px) {
+  .slick-dots {
+    bottom: 30px;
+    text-align: left;
+    padding: 0 0 0 10%;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0px 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    outline: none;
+  }
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before {
+    opacity: 1;
+  }
+  .slick-dots li button {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #5b7ebf;
+  }
+  .slick-dots li.slick-active button {
+    background: #5b7ebf;
+  }
+}

@@ -1,0 +1,52 @@
+body {
+  font-family: 'Noto Sans JP';
+}
+h1 {
+  font-size: 2rem;
+  background: #F1F2F0;
+  border-left: solid 8px #47A737;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+}
+.post-type-app-driver h1 {
+  border-left: solid 8px #1C47A8;
+}
+h2 {
+  font-size: 1.8rem;
+  color: #47A737;
+  margin-bottom: 20px;
+}
+.post-type-app-driver h2 {
+  color: #9EB1DC;
+}
+h3 {
+  font-size: 1.6rem;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+h3::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #47A737;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.post-type-app-driver h3::before {
+  background: #9EB1DC;
+}
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+p {
+  margin: 30px 0;
+}
